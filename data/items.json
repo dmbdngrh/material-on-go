@@ -2,7 +2,7 @@
   {
     "storeId": 1,
     "name": "Semen Portland 50kg",
-    "imageUrl": "https://images.unsplash.com/photo-1617196034738-26c5f7e6e4b5",
+    "imageUrl": "https://images.unsplash.com/photo-1617196034738-26c5f7e6e4b5?w=800&auto=format&fit=crop&q=60",
     "price": 65000,
     "unit": "sak",
     "stock": 120,
@@ -11,7 +11,7 @@
   {
     "storeId": 1,
     "name": "Pasir Halus",
-    "imageUrl": "https://images.unsplash.com/photo-1581092919535-7146d2cdb658",
+    "imageUrl": "https://images.unsplash.com/photo-1581092919535-7146d2cdb658?w=800&auto=format&fit=crop&q=60",
     "price": 300000,
     "unit": "kubik",
     "stock": 40,
@@ -20,7 +20,7 @@
   {
     "storeId": 2,
     "name": "Besi Beton 10mm",
-    "imageUrl": "https://images.unsplash.com/photo-1597000804693-8c6f5f0a4f4c",
+    "imageUrl": "https://images.unsplash.com/photo-1597000804693-8c6f5f0a4f4c?w=800&auto=format&fit=crop&q=60",
     "price": 75000,
     "unit": "batang",
     "stock": 200,
@@ -29,7 +29,7 @@
   {
     "storeId": 3,
     "name": "Cat Tembok Interior 5kg",
-    "imageUrl": "https://images.unsplash.com/photo-1581579185169-9a6b0e9b7c59",
+    "imageUrl": "https://images.unsplash.com/photo-1581579185169-9a6b0e9b7c59?w=800&auto=format&fit=crop&q=60",
     "price": 120000,
     "unit": "pail",
     "stock": 60,
