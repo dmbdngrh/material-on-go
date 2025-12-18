@@ -38,6 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     role: {
       type: DataTypes.STRING,
+      defaultValue: 'user',
       allowNull: false,
       validate: {
         notNull: {msg: 'User role is not assigned'},

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } %>
+        <p>E-mail</p>
+        <input type="text" name="email" <%= email ? `value=${email}` : '' %>>
+        <p>Password</p>
+        <input type="password" name="password"><br><br>
+        <input type="submit" value="Log in"> 
+        <a href="/register">Register</a>
+    </form>
+
+</body>
+</html>
