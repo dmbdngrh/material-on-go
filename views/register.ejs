@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <form action="/register" method="post">
-        <% if (error) { %>
-            <p class="error"><%= error %></p>
-        <% } %>
-        <p>E-mail</p>
-        <input type="text" name="email" <%= email ? `value=${email}` : '' %>>
-        <p>Password</p>
-        <input type="password" name="password"><br><br>
-        <input type="submit" value="Create new account"> 
-    </form>
-</body>
-</html>
+<div class="container">
+  <h1>Create an account</h1>
+
+  <form action="/register" method="post">
+    <% if (errors.email) { %>
+    <p><%= errors.email.message %></p>
+    <% } %> <input type="text" name="email" <%= email ? `value=${email}` : '' %> placeholder="Email"> <% if
+    (errors.password) { %>
+    <p><%= errors.password.message %></p>
+    <% } %>
+    <input class="" type="password" name="password" placeholder="Password" />
+    <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+    <button class="btn-primary" type="submit">Sign Up</button>
+  </form>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= continueSetup ? 'Continue setting up your profile' : 'Setup your profile' %> </h1>
+        <div>
+            <p>First Name*</p>
+            <% if (errors.email) { %>
+            <p><%= errors.email.message %></p>
+            <% } %>
+            <input type="text" name="firstName">
+        </div>
+        <div>
+            <p>Last Name (optional)</p>
+            <% if (errors.email) { %>
+            <p><%= errors.email.message %></p>
+            <% } %>
+            <input type="text" name="lastName">
+        </div>
+        <div>
+            <p>Phone Number*</p>
+            <% if (errors.email) { %>
+            <p><%= errors.email.message %></p>
+            <% } %>
+            <input type="text" name="phoneNumber">
+        </div>
+        <div>
+            <p>Address (optional)</p>
+            <% if (errors.email) { %>
+            <p><%= errors.email.message %></p>
+            <% } %>
+            <textarea name="address" id=""></textarea>
+        </div>
+        <br>
+        <input type="submit" value="<%= continueSetup ? 'Save & Continue' : 'Get Started' %>"> 
+</body>
+</html>

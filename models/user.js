@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
       return await bcrypt.compare(password, this.password);
     }
     static associate(models) {
-      // define association here
       User.hasOne(models.Profile);
     }
   }
@@ -19,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
       validate: {
+        isEmail: {msg: 'Invalid email format'},
         notNull: {msg: 'Email is required'},
         notEmpty: {msg: 'Email is required'},
-        isEmail: {msg: 'Invalid email format'},
       }
     },
     password: {
@@ -33,8 +32,15 @@ module.exports = (sequelize, DataTypes) => {
         min: {
           args: 8,
           msg: 'Password must be at least 8 characters'
+        },
+        matchConfirmation(value){          
+          if(value !== this.confirmPassword)
+            throw new Error("Pasword do not match");
         }
       }
+    },
+    confirmPassword: {
+        type: DataTypes.VIRTUAL,
     },
     role: {
       type: DataTypes.STRING,
@@ -49,6 +55,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+
   User.beforeCreate(async (user, option) => {
     user.password = await bcrypt.hash(user.password, 10);
   });

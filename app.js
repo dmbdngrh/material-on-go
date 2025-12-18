@@ -1,20 +1,24 @@
-const express = require('express');
-const session = require('express-session');
-const router = require('./routes/index');
+const express = require("express");
+const session = require("express-session");
+const expressLayouts = require("express-ejs-layouts");
+const router = require("./routes/index");
 const app = express();
 
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(expressLayouts);
+app.set("layout", "./layouts/main.ejs");
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
+app.use(expressLayouts);
 
 app.use(
-    session({
-        secret: 'Kucing Terbang Neil Amstrong',
-        resave: false,
-        saveUninitialized: false,
-        cookie: {secure: false, sameSite:true }
-    })
+  session({
+    secret: "Kucing Terbang Neil Amstrong",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false, sameSite: true },
+  })
 );
 
 app.use(router);

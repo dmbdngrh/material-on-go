@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lo</title>
 </head>
 <body>
     <form action="/login" method="post">
-        <% if (error) { %>
-            <p class="error"><%= error %></p>
+        <h1>Sign In</h1>
+        <% if (errors.general) { %>
+            <p><%= errors.general.message %></p>
         <% } %>
-        <p>E-mail</p>
+        <div>
+            <p>Email</p>
+            <% if (errors.email) { %>
+            <p><%= errors.email.message %></p>
+            <% } %>
+        </div>
         <input type="text" name="email" <%= email ? `value=${email}` : '' %>>
-        <p>Password</p>
+        <div>
+            <p>Password</p>
+            <% if (errors.password) { %>
+            <p><%= errors.password.message %></p>
+            <% } %>
+        </div>
         <input type="password" name="password"><br><br>
-        <input type="submit" value="Log in"> 
+        <input type="submit" value="Sign in"> 
         <a href="/register">Register</a>
     </form>
 

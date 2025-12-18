@@ -1,0 +1,32 @@
+[
+    {
+        "UserId": 1,
+        "firstName": "admin",
+        "lastName": "",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+        "phoneNumber": "+0",
+        "latitude": -6.538914579729211, 
+        "longitude": 106.79663676202102,
+        "address": ""
+    },
+    {
+        "UserId": 2,
+        "firstName": "Dimas",
+        "lastName": "Budi Nugraha",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+        "phoneNumber": "+6281210312699",
+        "latitude": -6.538914579729211, 
+        "longitude": 106.79663676202102,
+        "address": ""
+    },
+    {
+        "UserId": 3,
+        "firstName": "Daniel",
+        "lastName": "Alonso Sitanggang",
+        "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+        "phoneNumber": "+6212345678959",
+        "latitude": -6.538914579729211, 
+        "longitude": 106.79663676202102,
+        "address": ""
+    }
+]

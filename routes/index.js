@@ -1,15 +1,20 @@
 const router = require('express').Router();
 const Controller = require('../controllers/Controller');
+const { redirectIfAuthenticated, requireAuthentication, requireProfile } = require('./auth');
 
-router.get('/', 
-    (req,res,next) => req.session.user ? res.redirect('/dashboard') : next(),
-    Controller.landingPage);
-router.get('/login', Controller.showLogin);
+router.get('/', redirectIfAuthenticated, Controller.landingPage);
+router.get('/login', redirectIfAuthenticated, Controller.showLogin);
 router.post('/login', Controller.login);
-router.get('/register', Controller.showRegister);
+
+router.get('/register', redirectIfAuthenticated, Controller.showRegister);
 router.post('/register', Controller.register);
-router.use((req, res, next) => req.session.user ? next() : res.redirect('/'));
+
+router.use(requireAuthentication);
+router.get('/profile-setup', Controller.showProfileSetup);
+
+router.use(requireProfile);
 router.post('/logout', Controller.logout);
 router.get('/dashboard', Controller.dashboard);
+router.get('/profiles', Controller.profiles);
 
 module.exports = router;
