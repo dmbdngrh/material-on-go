@@ -1,0 +1,38 @@
+[
+  {
+    "StoreId": 1,
+    "name": "Semen Portland 50kg",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtrHtYf0MW5LwNAlVHFJjqooVnCWnpCdz6zQ&s",
+    "price": 65000,
+    "unit": "sak",
+    "stock": 120,
+    "description": "Semen berkualitas tinggi untuk konstruksi bangunan."
+  },
+  {
+    "StoreId": 1,
+    "name": "Pasir Halus",
+    "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7qukw-liwbv3wsl0bi6b",
+    "price": 300000,
+    "unit": "kubik",
+    "stock": 40,
+    "description": "Pasir halus cocok untuk plester dan acian."
+  },
+  {
+    "StoreId": 2,
+    "name": "Besi Beton 10mm",
+    "imageUrl": "https://img.juraganmaterial.id/unsafe/fit-in/350x350/filters:format(webp):quality(80)/https://juraganmaterial.id/static/product/f8qnlLCwEzSAuZtGdXpw3FZ88SOBF1Mj.png",
+    "price": 75000,
+    "unit": "batang",
+    "stock": 200,
+    "description": "Besi beton standar SNI diameter 10mm."
+  },
+  {
+    "StoreId": 3,
+    "name": "Cat Tembok Interior 5kg",
+    "imageUrl": "https://down-id.img.susercontent.com/file/523ee29f791ae9001a3dffb0cfc900e4",
+    "price": 120000,
+    "unit": "pail",
+    "stock": 60,
+    "description": "Cat tembok interior warna putih doff."
+  }
+]

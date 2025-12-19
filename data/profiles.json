@@ -1,0 +1,122 @@
+[
+  {
+    "UserId": 1,
+    "firstName": "admin",
+    "lastName": "",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+0",
+    "latitude": -6.538914579729211,
+    "longitude": 106.79663676202102,
+    "address": "",
+    "gender": "male",
+    "dateOfBirth": "1990-01-01"
+  },
+  {
+    "UserId": 2,
+    "firstName": "Dimas",
+    "lastName": "Budi Nugraha",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6281210312699",
+    "latitude": -6.538914579729211,
+    "longitude": 106.79663676202102,
+    "address": "Jl. Margonda Raya No. 100, Depok",
+    "gender": "male",
+    "dateOfBirth": "1995-03-15"
+  },
+  {
+    "UserId": 3,
+    "firstName": "Daniel",
+    "lastName": "Alonso Sitanggang",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6212345678959",
+    "latitude": -6.538914579729211,
+    "longitude": 106.79663676202102,
+    "address": "Jl. Cinere Raya No. 45, Depok",
+    "gender": "male",
+    "dateOfBirth": "1998-07-22"
+  },
+  {
+    "UserId": 4,
+    "firstName": "Siti",
+    "lastName": "Nurhaliza",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6281234567890",
+    "latitude": -6.402484,
+    "longitude": 106.794243,
+    "address": "Jl. Juanda No. 23, Depok",
+    "gender": "female",
+    "dateOfBirth": "1992-05-10"
+  },
+  {
+    "UserId": 5,
+    "firstName": "Budi",
+    "lastName": "Santoso",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6281298765432",
+    "latitude": -6.378306,
+    "longitude": 106.823147,
+    "address": "Jl. Raya Lenteng Agung No. 56, Jakarta Selatan",
+    "gender": "male",
+    "dateOfBirth": "1988-11-25"
+  },
+  {
+    "UserId": 6,
+    "firstName": "Rina",
+    "lastName": "Wijaya",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6285678901234",
+    "latitude": -6.364275,
+    "longitude": 106.833880,
+    "address": "Jl. Fatmawati No. 78, Jakarta Selatan",
+    "gender": "female",
+    "dateOfBirth": "1996-08-14"
+  },
+  {
+    "UserId": 7,
+    "firstName": "Agus",
+    "lastName": "Prasetyo",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6281345678901",
+    "latitude": -6.389123,
+    "longitude": 106.816666,
+    "address": "Jl. Raya Pasar Minggu No. 12, Jakarta Selatan",
+    "gender": "male",
+    "dateOfBirth": "1991-02-28"
+  },
+  {
+    "UserId": 8,
+    "firstName": "Dewi",
+    "lastName": "Lestari",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6287654321098",
+    "latitude": -6.366667,
+    "longitude": 106.800000,
+    "address": "Jl. Cilandak KKO No. 34, Jakarta Selatan",
+    "gender": "female",
+    "dateOfBirth": "1994-12-05"
+  },
+  {
+    "UserId": 9,
+    "firstName": "Eko",
+    "lastName": "Wahyudi",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6289012345678",
+    "latitude": -6.371234,
+    "longitude": 106.829876,
+    "address": "Jl. TB Simatupang No. 99, Jakarta Selatan",
+    "gender": "male",
+    "dateOfBirth": "1993-06-18"
+  },
+  {
+    "UserId": 10,
+    "firstName": "Putri",
+    "lastName": "Maharani",
+    "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s",
+    "phoneNumber": "+6282345678901",
+    "latitude": -6.356789,
+    "longitude": 106.845123,
+    "address": "Jl. Warung Buncit No. 67, Jakarta Selatan",
+    "gender": "female",
+    "dateOfBirth": "1997-09-30"
+  }
+]

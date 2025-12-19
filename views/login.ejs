@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo</title>
-</head>
-<body>
+<div class="container">
     <form action="/login" method="post">
         <h1>Sign In</h1>
-        <% if (errors.general) { %>
-            <p><%= errors.general.message %></p>
-        <% } %>
-        <div>
-            <p>Email</p>
-            <% if (errors.email) { %>
-            <p><%= errors.email.message %></p>
-            <% } %>
-        </div>
-        <input type="text" name="email" <%= email ? `value=${email}` : '' %>>
-        <div>
-            <p>Password</p>
-            <% if (errors.password) { %>
-            <p><%= errors.password.message %></p>
-            <% } %>
-        </div>
-        <input type="password" name="password"><br><br>
-        <input type="submit" value="Sign in"> 
-        <a href="/register">Register</a>
-    </form>
+        <input <%=errors.email ? 'class=error' : '' %> type="text" name="email" <%=email ? `value=${email}` : '' %>
+            placeholder="<%= errors.email ? errors.email.message : 'Email' %>">
+                <input <%=errors.password ? 'class=error' : '' %> type="password" name="password"
+                placeholder="<%= errors.password ? errors.password.message : 'Password' %>" />
 
-</body>
-</html>
+                    <div class="btn-container">
+                        <button class="btn-primary" type="submit">Sign in</button>
+                        <a class="btn-secondary" href="/register">Register</a>
+                        <% if (errors.general) { %>
+                            <p class="error">
+                                <%= errors.general.message %>
+                            </p>
+                            <% } %>
+                    </div>
+    </form>
+</div>

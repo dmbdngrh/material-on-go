@@ -1,0 +1,52 @@
+[
+    {
+        "email": "admin@admin.admin",
+        "password": "admin",
+        "role": "admin"
+    },
+    {
+        "email": "dimas@admin.admin",
+        "password": "dimas",
+        "role": "admin"
+    },
+    {
+        "email": "daniel@admin.admin",
+        "password": "daniel",
+        "role": "admin"
+    },
+    {
+        "email": "siti@user.com",
+        "password": "siti123",
+        "role": "user"
+    },
+    {
+        "email": "budi@user.com",
+        "password": "budi123",
+        "role": "user"
+    },
+    {
+        "email": "rina@user.com",
+        "password": "rina123",
+        "role": "user"
+    },
+    {
+        "email": "agus@user.com",
+        "password": "agus123",
+        "role": "user"
+    },
+    {
+        "email": "dewi@user.com",
+        "password": "dewi123",
+        "role": "user"
+    },
+    {
+        "email": "eko@user.com",
+        "password": "eko123",
+        "role": "user"
+    },
+    {
+        "email": "putri@user.com",
+        "password": "putri123",
+        "role": "user"
+    }
+]

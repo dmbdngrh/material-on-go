@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    let data = JSON.parse(await fs.readFile('./data/admins.json','utf-8'));
+    let data = JSON.parse(await fs.readFile('./data/users.json','utf-8'));
     data = await Promise.all(data.map(async element => {
       // console.log(element);
       

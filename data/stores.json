@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Toko Bangunan Jaya Abadi",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX42qq8xmT51k5RZmDdqWXhQFj8xR0gIo8kg&s",
+    "address": "Jl. Raya Veteran No. 12, Medan",
+    "description": "Menyediakan berbagai kebutuhan material bangunan lengkap dan terpercaya.",
+    "rating": 4.6,
+    "isOpen": true
+  },
+  {
+    "name": "Sinar Baja Material",
+    "imageUrl": "https://sinarbaja.co.id/images/gallery/baja-ringan-reng.jpg",
+    "address": "Jl. Gatot Subroto No. 45, Medan",
+    "description": "Spesialis besi, baja ringan, dan material konstruksi berat.",
+    "rating": 4.4,
+    "isOpen": true
+  },
+  {
+    "name": "Mitra Bangunan Sejahtera",
+    "imageUrl": "https://mitrabangunanstore.id/wp-content/uploads/2023/06/Untitled-CBB-1.jpg",
+    "address": "Jl. Setia Budi No. 88, Medan",
+    "description": "Material bangunan harian dengan harga bersahabat.",
+    "rating": 4.2,
+    "isOpen": false
+  }
+]

@@ -1,41 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1><%= continueSetup ? 'Continue setting up your profile' : 'Setup your profile' %> </h1>
-        <div>
-            <p>First Name*</p>
-            <% if (errors.email) { %>
-            <p><%= errors.email.message %></p>
-            <% } %>
-            <input type="text" name="firstName">
+<div class="container">
+    <form action="/profile-setup" method="post">
+        <h1>
+            Setup your profile
+        </h1>
+        <div class="btn-container">
+            <input <%=errors.firstName ? 'class=error' : '' %> type="text" name="firstName" placeholder="<%=
+                errors.firstName ? errors.firstName.message : 'First name' %> *">
+                <input type="text" name="lastName" placeholder="Last name (optional)">
         </div>
-        <div>
-            <p>Last Name (optional)</p>
-            <% if (errors.email) { %>
-            <p><%= errors.email.message %></p>
-            <% } %>
-            <input type="text" name="lastName">
+        <div style="display: flex; justify-content: space-between;">
+            <div class="btn-container">
+                <select name="gender">
+                    <option value="" selected disabled>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <% if (errors.gender) { %>
+                    <p class="error" style="padding-bottom: 1rem;">
+                        <%= errors.gender.message %>
+                    </p>
+                    <% } %>
+            </div>
+            <% if (errors.dateOfBirth) { %>
+                    <p class="error">
+                        <%= errors.dateOfBirth.message %>
+                    </p>
+                <% } %>
         </div>
-        <div>
-            <p>Phone Number*</p>
-            <% if (errors.email) { %>
-            <p><%= errors.email.message %></p>
-            <% } %>
-            <input type="text" name="phoneNumber">
-        </div>
-        <div>
-            <p>Address (optional)</p>
-            <% if (errors.email) { %>
-            <p><%= errors.email.message %></p>
-            <% } %>
-            <textarea name="address" id=""></textarea>
-        </div>
-        <br>
-        <input type="submit" value="<%= continueSetup ? 'Save & Continue' : 'Get Started' %>"> 
-</body>
-</html>
+        <input <%=errors.dateOfBirth ? 'class=error' : '' %> type="date" name="dateOfBirth">
+        <input <%=errors.phoneNumber ? 'class=error' : '' %> type="text" name="phoneNumber" placeholder="<%=
+                errors.phoneNumber ? errors.phoneNumber.message : 'Phone number' %> *">
+        <input type="text" name="profilePicture" placeholder="image URL (optional)">
+        <textarea <%=errors.address ? 'class=error' : '' %> name="address" placeholder="Address (optional)"></textarea>
+        <button class="btn-primary" type="submit">
+            Get Started
+        </button>
+    </form>
+</div>

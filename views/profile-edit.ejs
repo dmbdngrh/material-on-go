@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="card" style="text-align: center; max-width: 420px; margin: auto;">
+
+    <!-- Foto Profil -->
+    <img
+      src="<%= user.Profile.profilePicture %>"
+      alt="Foto Profil"
+      style="
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 4px solid #F4B740;
+      "
+    >
+    <form action="/profile/edit" method="post">
+        <input type="text" name="profilePicture" placeholder="image URL (optional)">
+
+
+    <div class="btn-container">
+            <input <%=errors.firstName ? 'class=error' : '' %> type="text" name="firstName" placeholder="<%=
+                errors.firstName ? errors.firstName.message : 'First name' %> *" value="<%= user.Profile.firstName %>">
+                <input type="text" name="lastName" placeholder="Last name" value="<%= user.Profile.lastName %>">
+        </div>
+    <p style="color: #6B7280; margin-bottom: 1.5rem;">
+      <%= user.email %>
+    </p>
+
+    <div style="text-align: left; margin-bottom: 1.5rem;">
+        <% if (session.user.role !== 'user') { %>
+            <p><strong>Role:</strong> <%= session.user.role %></p>
+        <% } %>
+      <p><strong>Gender:</strong> <%= user.Profile.gender %></p>
+      <p><strong>Birthdate:</strong> <input <%=errors.dateOfBirth ? 'class=error' : '' %> type="date" name="dateOfBirth" value="<%= user.Profile.dateOfBirth %>"></p>
+      <p><strong>Phone Number:</strong> <input <%=errors.phoneNumber ? 'class=error' : '' %> type="text" name="phoneNumber" placeholder="<%=
+                errors.phoneNumber ? errors.phoneNumber.message : 'Phone number' %> *" value="<%= user.Profile.phoneNumber %>"></p>
+      <p><strong>Address:</strong><br> <textarea <%=errors.address ? 'class=error' : '' %> name="address" placeholder="Address (optional)"><%= user.Profile.address %></textarea>
+        </p>
+    </div>
+        <button class="btn-outline" type="submit" style="width: 100%;">Save profile</button>
+    </form>
+  </div>
+</div>

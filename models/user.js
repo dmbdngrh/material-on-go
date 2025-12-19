@@ -29,13 +29,14 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notNull: {msg: 'Password is required'},
         notEmpty: {msg: 'Password is required'},
-        min: {
-          args: 8,
-          msg: 'Password must be at least 8 characters'
+        isLongEnough(value) {
+          if (value && value.length < 8) {
+            throw new Error('Password must be at least 8 characters');
+          }
         },
         matchConfirmation(value){          
           if(value !== this.confirmPassword)
-            throw new Error("Pasword do not match");
+            throw new Error("Password do not match");
         }
       }
     },

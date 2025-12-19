@@ -1,12 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-</head>
-<body>
-    <p>First Name: <%=  %></p>
-    <p>Last Name: <%=  %></p>
-</body>
-</html>
+<div class="container">
+  <div class="card" style="text-align: center; max-width: 420px; margin: auto;">
+
+    <!-- Foto Profil -->
+    <img
+      src="<%= user.Profile.profilePicture %>"
+      alt="Foto Profil"
+      style="
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 4px solid #F4B740;
+      "
+    >
+
+    <h2 style="margin-bottom: 0.3rem;"><%= user.Profile.fullName %></h2>
+    <p style="color: #6B7280; margin-bottom: 1.5rem;">
+      <%= user.email %>
+    </p>
+
+    <div style="text-align: left; margin-bottom: 1.5rem;">
+        <% if (session.user.role !== 'user') { %>
+            <p><strong>Role:</strong> <%= session.user.role %></p>
+        <% } %>
+      <p><strong>Gender:</strong> <%= user.Profile.gender %></p>
+      <p><strong>Age:</strong> <%= calculateAge(user.Profile.dateOfBirth) %></p>
+      <p><strong>Phone Number:</strong> <%= user.Profile.phoneNumber %></p>
+      <p><strong>Address:</strong><br> <%= user.Profile.address %></p>
+    </div>
+
+    <a href="/profile/edit" class="btn-outline" style="width: 100%;">
+      Edit profile
+    </a>
+  </div>
+</div>

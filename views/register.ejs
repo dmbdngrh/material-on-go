@@ -2,14 +2,13 @@
   <h1>Create an account</h1>
 
   <form action="/register" method="post">
-    <% if (errors.email) { %>
-    <p><%= errors.email.message %></p>
-    <% } %> <input type="text" name="email" <%= email ? `value=${email}` : '' %> placeholder="Email"> <% if
-    (errors.password) { %>
-    <p><%= errors.password.message %></p>
-    <% } %>
-    <input class="" type="password" name="password" placeholder="Password" />
-    <input type="password" name="confirmPassword" placeholder="Confirm Password" />
-    <button class="btn-primary" type="submit">Sign Up</button>
+    <input <%=errors.email ? 'class=error' : '' %> type="text" name="email" <%=email ? `value=${email}` : '' %>
+      placeholder="<%= errors.email ? errors.email.message : 'Email' %>">
+        <input <%=errors.password ? 'class=error' : '' %> type="password" name="password"
+        placeholder="<%= errors.password ? errors.password.message : 'Password' %>" />
+
+          <input <%=errors.password ? 'class=error' : '' %> type="password" name="confirmPassword" placeholder="<%=
+            errors.password ? 'Confirm password' : 'Confirm password' %>" />
+            <button class="btn-primary" type="submit">Sign Up</button>
   </form>
 </div>
