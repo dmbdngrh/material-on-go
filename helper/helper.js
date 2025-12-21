@@ -1,5 +1,4 @@
 const fs = require('fs').promises;
-const easyInvoice = require('easyInvoice');
 
 const calculateAge = (dateOfBirth) => {
     const today = new Date();
@@ -16,9 +15,5 @@ const calculateAge = (dateOfBirth) => {
 };
 
 const formatIDR = (value) => new Intl.NumberFormat("id-ID", {style: "currency", currency: "IDR"}).format(value);
-
-const generateInvoice = async (data) => {
-    
-}
 
 module.exports = {calculateAge, formatIDR};
