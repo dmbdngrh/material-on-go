@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Create an account</h1>
+
+  <form action="/register" method="post">
+    <input <%=errors.email ? 'class=error' : '' %> type="text" name="email" <%=email ? `value=${email}` : '' %>
+      placeholder="<%= errors.email ? errors.email.message : 'Email' %>">
+        <input <%=errors.password ? 'class=error' : '' %> type="password" name="password"
+        placeholder="<%= errors.password ? errors.password.message : 'Password' %>" />
+
+          <input <%=errors.password ? 'class=error' : '' %> type="password" name="confirmPassword" placeholder="<%=
+            errors.password ? 'Confirm password' : 'Confirm password' %>" />
+            <button class="btn-primary" type="submit">Sign Up</button>
+  </form>
+</div>

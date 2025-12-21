@@ -1,0 +1,19 @@
+<div class="container">
+    <form action="/login" method="post">
+        <h1>Sign In</h1>
+        <input <%=errors.email ? 'class=error' : '' %> type="text" name="email" <%=email ? `value=${email}` : '' %>
+            placeholder="<%= errors.email ? errors.email.message : 'Email' %>">
+                <input <%=errors.password ? 'class=error' : '' %> type="password" name="password"
+                placeholder="<%= errors.password ? errors.password.message : 'Password' %>" />
+
+                    <div class="btn-container">
+                        <button class="btn-primary" type="submit">Sign in</button>
+                        <a class="btn-secondary" href="/register">Register</a>
+                        <% if (errors.general) { %>
+                            <p class="error">
+                                <%= errors.general.message %>
+                            </p>
+                            <% } %>
+                    </div>
+    </form>
+</div>

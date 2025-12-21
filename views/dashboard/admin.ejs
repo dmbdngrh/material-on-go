@@ -1,0 +1,30 @@
+<div class="container">
+    <% if (deleted) { %>
+    <p class="error">User <%= deleted %> deleted from database</p>
+    <% } %>
+    <h1>Admin Dashboard</h1>
+    <form action="/dashboard" method="get">
+        <div class="btn-container">
+            <input type="text" name="search">
+            <button class="btn-primary" type="submit" style="margin-bottom: 1rem;">Search</button>
+        </div>
+    </form>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <% data.forEach((user, index) => { %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td><%= user.Profile.fullName %></td>
+                <td><%= user.email %></td>
+                <% if (user.role !== 'admin') { %>
+                    <td><a class="btn-delete" href="/user/<%= user.id %>/delete">Delete</a></td>
+                <% } %>
+            </tr>
+        <% }) %>
+    </table>
+</div>

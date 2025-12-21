@@ -1,0 +1,124 @@
+<% if (ongoingOrder) { %>
+<div class="ongoing-order-section">
+<h2 class="section-title">Your Ongoing Order</h2>
+
+<div class="order-wrapper">
+    <div class="card">
+    <div class="order-header">
+        <h3><%= ongoingOrder.code %></h3>
+        <span class="badge badge-ongoing">
+        <%= ongoingOrder.status %>
+        </span>
+    </div>
+    
+    <p class="order-date">
+        Order Date: <%= new Date(ongoingOrder.createdAt).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+    </p>
+    
+    <div class="order-total">
+        <p class="total-label">Total Price</p>
+        <p class="total-price">
+        Rp <%= ongoingOrder.totalPrice.toLocaleString('id-ID') %>
+        </p>
+    </div>
+    
+    <% if (ongoingOrder.Items && ongoingOrder.Items.length > 0) { %>
+        <div class="order-items-section">
+        <h4 class="items-header">Order Items (<%= ongoingOrder.Items.length %>)</h4>
+        <div class="items-list">
+            <% ongoingOrder.Items.forEach(item => { %>
+            <div class="item-card">
+                <div class="item-name-qty">
+                <p class="item-name">
+                    <%= item.name %>
+                </p>
+                <% if (item.OrderItem && item.OrderItem.quantity) { %>
+                    <span class="item-quantity">
+                    x<%= item.OrderItem.quantity %>
+                    </span>
+                <% } %>
+                </div>
+                <% if (item.Store) { %>
+                <p class="item-store">
+                    🏪 <%= item.Store.name %>
+                </p>
+                <% } %>
+                <p class="item-price">
+                Rp <%= item.price ? item.price.toLocaleString('id-ID') : '0' %>
+                <% if (item.OrderItem && item.OrderItem.quantity) { %>
+                    <span class="item-subtotal">
+                    (Subtotal: Rp <%= (item.price * item.OrderItem.quantity).toLocaleString('id-ID') %>)
+                    </span>
+                <% } %>
+                </p>
+            </div>
+            <% }); %>
+        </div>
+        </div>
+    <% } %>
+    </div>
+</div>
+</div>
+<% } %>
+
+<h2 class="section-title">Available Stores</h2>
+
+<div class="features">
+<% openStores.forEach(store => { %>
+<div class="card">
+    <img src="<%= store.imageUrl %>" alt="<%= store.name %>" class="store-image">
+    
+    <h3><%= store.name %></h3>
+    
+    <div class="store-rating">
+    <span class="rating-stars">★ <%= store.rating %></span>
+    <% if (store.isOpen) { %>
+        <span class="badge badge-open">
+        OPEN
+        </span>
+    <% } else { %>
+        <span class="badge badge-closed">
+        CLOSED
+        </span>
+    <% } %>
+    </div>
+    
+    <p class="store-address">
+    📍 <%= store.address %>
+    </p>
+    
+    <p>
+    <%= store.description %>
+    </p>
+    
+    <% if (store.Items && store.Items.length > 0) { %>
+    <div class="store-items-section">
+        <h4 class="items-header">Available Items (<%= store.Items.length %>)</h4>
+        <div class="items-list">
+        <% store.Items.forEach(item => { %>
+            <div class="store-item-card">
+            <div>
+                <p class="item-name">
+                <%= item.name %>
+                </p>
+                <% if (item.description) { %>
+                <p class="item-description">
+                    <%= item.description %>
+                </p>
+                <% } %>
+                <p class="item-price">
+                Rp <%= item.price ? item.price.toLocaleString('id-ID') : '0' %>
+                </p>
+            </div>
+            </div>
+        <% }); %>
+        </div>
+    </div>
+    <% } else { %>
+    <p class="no-items">
+        No items available
+    </p>
+    <% } %>
+</div>
+<% }); %>
+</div>
